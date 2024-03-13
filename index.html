@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy valentine's day</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="box  xuathienbox">
+            <div class="boxtieude">
+                <h1 class="tieude hieu-ung"><b><i>Happy valentine's day <br> 14-03-2024</i></b></h1>
+            </div>
+            <div id="noidung0"></div>
+            <div id="noidung1" style="display:none;"> <b style="font-size: 25px;">Chào cậu ... <br></b> Chúc
+                cậu một ngày valentine thật... à quên <b style="color: red;font-size: 25px;">cậu làm éo gì có
+                    người iu:))</b></b></div>
+            <div id="noidung2" style="display:none;">Thôi không sao,vì ai rồi cũng có người iuu ,còn bao giờ có thì.... <b style="color: red;font-size: 25px;">chưa biết </b>:))</div>
+            <div id="noidung3" style="display:none;">Hãy yêu bản thân  mình, cố gắng để ngày càng hoàn thiện bản thân hơn và đừng quên tận hưởng sự độc thân đi, cả <b style="color: red;font-size: 25px;">thời đến cản không kịp</b> đâu :)) </div>
+            <div id="noidung4" style="display:none;">Bấm vào ảnh để mở quà nhé!<br>Thay vì chỉ chọn <b
+                    style="color: red;font-size: 25px;">1</b> trong <b style="color: red;font-size: 25px;">2</b>, thì ta
+                còn có thể chọn cả <b style="color: red;font-size: 25px;">đôi <b style="text-decoration: line-through;">tar</b> </b>...mà nhỉ:))
+                <!-- qua trai tim -->
+                <br>
+                <a id="hopqua-link" href="https://pdinhbao278.github.io/TRAITIM/">
+                    <img src="hopquavalentine.jpg" id="hopqua" alt="hộp quà">
+                </a>
+                <!-- qua hoa -->
+                <a id="hopqua-link" href="https://pdinhbao278.github.io/hoavalentine/">
+                    <img src="hoahong.jpg" id="hopqua" alt="hộp quà">
+                </a>
+            </div>
+            <button class="nutbam" onclick="batDau()" id="chay"><b class="hieu-ung">Bắt đầu</b></button>
+            <div class="box-loading">
+                <div class="loading">
+                </div>
+            </div>
+        </div>
+        <div class="nhac">
+            <audio id="myAudio" autoplay loop>
+                <source src="anhnangcuaanh.mp3">
+            </audio>
+        </div>
+
+
+        <script>
+            function batDau() {
+                // nhac
+                var audio = document.getElementById("myAudio");
+                audio.play();
+
+                var noidung0 = document.getElementById('noidung0');
+                var noidung1 = document.getElementById('noidung1');
+                var noidung2 = document.getElementById('noidung2');
+                var noidung3 = document.getElementById('noidung3');
+                var noidung4 = document.getElementById('noidung4');
+                var nutBam = document.querySelector('.nutbam');
+
+
+                setTimeout(function () {
+                    nutBam.style.display = 'none';
+                }, 2000);
+
+                setTimeout(function () {
+                    noidung0.style.display = 'none';
+                    noidung1.style.display = 'block';
+
+                }, 2000);
+
+                setTimeout(function () {
+                    noidung1.style.display = 'none';
+                    noidung2.style.display = 'block';
+                }, 9000);
+
+                setTimeout(function () {
+                    noidung2.style.display = 'none';
+                    noidung3.style.display = 'block';
+                }, 17500);
+
+                setTimeout(function () {
+                    noidung3.style.display = 'none';
+                    noidung4.style.display = 'block';
+                }, 26000);
+            }
+
+            // Kick hộp quà 
+            document.getElementById('hopqua-link').addEventListener('click', function () {
+                // Thực hiện hành động khi bấm vào hộp quà, ví dụ: mở link
+                window.location.href = this.href;
+            });
+
+            document.querySelector('.nutbam').addEventListener('click', function () {
+                var element = document.querySelector('.loading');
+                var boxLoading = document.querySelector('.box-loading')
+                element.classList.add('chay');
+                setTimeout(function () {
+                    boxLoading.style.display = 'none';
+                }, 2000);
+            });
+
+        </script>
+</body>
+
+</html>

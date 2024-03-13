@@ -1,0 +1,161 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root {
+    --mauvien: #EB3A54;
+}
+.main{
+    height: 100vh;
+    background :url(anhhoa.png) ;
+    position: relative;
+}
+.box{
+    background:url(anh8.jpg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    height: 600px;
+    width: 480px;
+    border: 5px solid var(--mauvien);
+    color: #c71585;
+    animation-name: xuathienbox;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius:  50px;
+}
+@keyframes xuathienbox{
+    0%{
+        top:0%;
+        left: 0%;
+    }
+    100%{
+        top:50%;
+        left: 50%;
+    }
+}
+.tieude{
+    text-align: center;
+    height: 65px;
+    
+
+}
+.hieu-ung{
+    animation-name: nhapnhay;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes nhapnhay{
+    0%{
+        color: #EB3A54;
+        opacity: 1;
+    }
+    50%{
+        color: #FF33CC;
+        opacity: 0.5;
+    }
+    100%{
+        color: #c71585;
+        opacity: 1;
+    }
+    
+}
+
+#noidung0,#noidung1, #noidung2,#noidung3,#noidung4{
+    margin-top: 25px;
+    height: 40%;
+    background-color: antiquewhite;
+    padding: 10px;
+    text-align: justify;
+    font-size: 20px;
+    border-radius: 10px;
+}
+#noidung4{
+    justify-content: center;
+    text-align: center;
+
+}
+
+#noidung4 a{
+    display: inline-block;
+    padding:0 30px;
+    
+}
+.nutbam{
+    width: 80%;
+    height: 60px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--mauvien);
+    border: 2px solid #F26398 ;
+    background-color: antiquewhite;
+}
+.nutbam:hover{
+    background-color: #FFC0CB;
+    color: #fff;
+}
+.box-loading{
+    position: absolute;
+    background-color: #FFD3D4;
+    height: 20px;
+    top: 90%;
+    width: 28%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #F26398;
+
+}
+.loading{
+    height: 100%;
+    width: 20px;
+    position: absolute;
+    background-color: var(--mauvien);
+    border-radius: 50%;
+
+}
+
+
+.chay{
+    animation-name: thucthi;
+    animation-duration: 2s;
+    animation-iteration-count: inherit;
+}
+
+@keyframes thucthi{
+    0%{
+        top: 0px;
+        left: 0%;
+        background-color: #EB3A54;
+        
+    }
+    50%{
+        background-color: var(--mauvien);
+    }
+    100%{
+        left: 85%;
+        background-color: #EB3A54;
+
+    }
+}
+#hopqua{
+    height: 111px;
+    width: 111px;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
